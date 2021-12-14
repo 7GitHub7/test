@@ -5,6 +5,25 @@
     <link>https://7github7.github.io/test/</link>
     <description>Recent content on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://7github7.github.io/test/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paxos&amp;Raft</title>
+      <link>https://7github7.github.io/test/post/paxosraft/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://7github7.github.io/test/post/paxosraft/</guid>
+      <description>&lt;p&gt;Algorytmy konsensusu&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://7github7.github.io/test/about/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://7github7.github.io/test/about/</guid>
+      <description>Cześć, jestem Piotrek</description>
+    </item>
+    
   </channel>
 </rss>
