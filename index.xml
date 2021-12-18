@@ -6,14 +6,28 @@
     <description>Recent content on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Paxos&amp;Raft</title>
-      <link>https://7github7.github.io/test/post/paxosraft/</link>
+      <title>Webdev słownik cz.1</title>
+      <link>https://7github7.github.io/test/post/webdev-s%C5%82ownik-cz.1/</link>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://7github7.github.io/test/post/webdev-s%C5%82ownik-cz.1/</guid>
+      <description>Autoryzacja vs uwierzytelnienie Uwierzytelnianie - weryfikacja tożsamości uzytkownika np. za pomocą hasła
+Autoryzacja - prawo do wykonania konkretnej operacji/dostępu do konkretnego pliku(następuje po uwierzytelnianiu)
+Gdzie prowadzi adres 127.0.0.1? Do naszego komputera. Informacje są wymieniane wewnątrz naszego komputera.
+&amp;ldquo;Loopback&amp;rdquo; - tutaj nasze zapytania trafiaja, jest to witualnie urządzenie sieciowe.
+127.0.0.2/3/4 - prowadzi do tego samego.
+Czym różni sie szyfrowanie symetryczne od asymetrycznego? Szyfrowanie symetryczne używa jdnego klucza do szyfrowania jaki deszyfrowania informacji.</description>
+    </item>
+    
+    <item>
+      <title>Paxos &amp; Raft</title>
+      <link>https://7github7.github.io/test/post/paxos-images/</link>
       <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://7github7.github.io/test/post/paxosraft/</guid>
-      <description>&lt;p&gt;Algorytmy konsensusu&lt;/p&gt;</description>
+      <guid>https://7github7.github.io/test/post/paxos-images/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Algorytmy konsensusu&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

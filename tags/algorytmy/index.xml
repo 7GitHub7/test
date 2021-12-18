@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorytmy on Blog</title>
+    <link>https://7github7.github.io/test/tags/algorytmy/</link>
+    <description>Recent content in algorytmy on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/tags/algorytmy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paxos &amp; Raft</title>
+      <link>https://7github7.github.io/test/post/paxos-images/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://7github7.github.io/test/post/paxos-images/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Algorytmy konsensusu&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

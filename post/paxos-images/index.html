@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.90.1" />
-  <link rel="canonical" href="https://7github7.github.io/test/tags/" />
+  <link rel="canonical" href="https://7github7.github.io/test/post/paxos-images/" />
 
   
     
-    <meta name="description" content="Tags">
+    <meta name="description" content="Algorytmy konsensusu">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://7github7.github.io/test/apple-touch-icon.png">
@@ -56,7 +56,7 @@
 
   
   
-  <title>Tags | Blog</title>
+  <title>Paxos &amp; Raft | Blog</title>
 </head>
 
   <body>
@@ -195,7 +195,7 @@
       
       
       
-      <a href="/test/post/" >
+      <a href="/test/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -208,7 +208,7 @@
       
       
       
-      <a href="/test/tags/" aria-current="page">
+      <a href="/test/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -239,33 +239,229 @@
         <div>
           
   <main id="main">
-    <h1>Tags</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Paxos &amp; Raft
+    </h1>
+
+    <div class="date">
       
-        <li>
-          <h2>
-            <a href="/test/tags/algorytmy/">
+      
+      <strong>Publish date: </strong>Dec 13, 2021
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              (1) algorytmy
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/test/tags/web/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) web
-            </a>
-          </h2>
-        </li>
-      
-    </ul>
+              
+              <a href="/test/tags/algorytmy/">algorytmy</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+
+
+    <p><em>Algorytmy konsensusu</em></p>
+<p>W tym artukule postram się przybliżyć co wspólnego ma Grecka wyspa z systememi rozproszonymi. <br>
+Przedstawię zasadę działania popularnych algorytmów osiągania konsensu w systemach rozproszonych - Paxos I Raft.</p>
+<div class="expandable-section">
+  
+    <h2>
+  
+    
+    
+    
+    
+    
+    <button aria-expanded="false" data-expands="js-expandable-c96cd209f7a3babcd3fdb0c59a659fde">
+      <span class="expandable-label">Historia</span>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
+        <g transform="translate(0 -981.5)">
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
+        </g>
+      </svg>
+    </button>
+  
+    </h2>
+  
+  <div id="js-expandable-c96cd209f7a3babcd3fdb0c59a659fde" hidden>
+    Historia algorytmu Paxos sięga czasów antycznej Grecji. Transformacja rządu na system parlamentarny, który z założenie wymaga posiedzeń rządzących było nie lada wyzwaniem. W ówczesnych czasach priorytetem greka był handel, na który poświęcał większość swojego czasu. Aby parlament mógł funkcjonować poprawnie, musieli wypracować system, który pozwalał politykom na wchodzenie i wychodzenie w dowolnym czasie. W związku z tym, że pozostały szczątkowe informacje działania takiego algorytmu pozwoliło to zainspirować się nim w sytemach rozroszonych.
+  </div>
+</div>
+
+<h2 id="paxos">PAXOS</h2>
+<p>Użyty w implementacji na przykład:</p>
+<ul>
+<li>
+<p>Apache ZooKeeper</p>
+</li>
+<li>
+<p>Systemy Google</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>W teorii algorytm jest prosty jednak implementacja nie jest taka łatwa na jaką się wydaję. Ciężko jest znaleźć zaimplementowany algorytm zgodny z oryginalnymi założeniemi.
+\</p>
+<p>W podstawowej wersji algorytmu mamy 4 główne role:</p>
+<table>
+<thead>
+<tr>
+<th>Rola</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>wysyła żądania do systemu</td>
+</tr>
+<tr>
+<td>Proposer</td>
+<td>przewodzi w głosowaniu</td>
+</tr>
+<tr>
+<td>Acceptor</td>
+<td>głosuje</td>
+</tr>
+<tr>
+<td>Learner</td>
+<td>powiela podjęte decyzje</td>
+</tr>
+</tbody>
+</table>
+<p>Przykładowy przebieg osiągania wpólnego statnu dla maszyn w systemie:</p>
+<ol>
+<li>
+<p>System otrzymuje żądanie od Clienta</p>
+</li>
+<li>
+<p>Wybrany lider(Proposer) wysyła prośbę o obietnicę do każdego z członków. Prośba musi zawierać liczbę <em>n</em> która jest wartościa kontolną dla członków na podstawie której mogą stwierdzić czy dany lider jest aktualny.</p>
+</li>
+<li>
+<p>Jeżeli wartość kontrolna się zgadza to każdy członek odsyła obietnicę(Promise) w której deklaruję, że jeżeli wyślesz mi propozycję wprowadzenia zmian w systemi oraz prośba będzie zawierała tą konkretną wartością <em>n</em> to wprowadze zaproponowane zmiany.</p>
+</li>
+<li>
+<p>Jeżeli Proposer otrzymał więcej niż połowe pozytywnych odpwiedzi, wysyła wiadomość typu Accept która zawiera wartość n oraz wartośc/stan który członek ma zapisać.</p>
+</li>
+<li>
+<p>Acceptor odsyła potwierdzenie</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+  
+
+
+<figure role="group" aria-describedby="caption-affd17b1d80b5bae139ffeb6fad9d585">
+  <a href="/test/post/paxos-images/basic.jpg" class="img-link">
+    <img src="/test/post/paxos-images/basic_hufa329455bae2339ccee56e7a86f628a2_18374_700x0_resize_q75_box.jpg">
+  </a>
+  <figcaption id="caption-affd17b1d80b5bae139ffeb6fad9d585">
+    Przykładowy przebieg osiągania wpólnego statnu dla maszyn w systemie
+  </figcaption>
+</figure>
+
+<p>Prepare(n) – n za każdym razem musi być większa niż poprzednio</p>
+<p>Proces składa się z dwóch etapów. Pierwszy odpowiada za otrzymanie przez Proposera odpoweidzi Promise od członków. Drugi to zapisanie dancyh przez członków.</p>
+<p>Tak jak można zauważyć w algorytmie wsytępuję redundancja ale o tym za chwilę.</p>
+<h3 id="jak-paxos-radzi-sobie-z-awariami">Jak Paxos radzi sobie z awariami.</h3>
+<h4 id="acceptor-ulega-awarii">Acceptor ulega awarii</h4>
+
+
+
+
+
+
+
+
+
+  
+
+
+<figure role="group" aria-describedby="caption-a1d32009f16613e555290ce6c834ca3c">
+  <a href="/test/post/paxos-images/acceptor.jpg" class="img-link">
+    <img src="/test/post/paxos-images/acceptor_hu89a59967221f0174b2a880a866eff72d_20436_700x0_resize_q75_box.jpg">
+  </a>
+  <figcaption id="caption-a1d32009f16613e555290ce6c834ca3c">
+    Acceptor ulega awarii
+  </figcaption>
+</figure>
+
+<p>Ze względu na to, że algorytm potrzebuję większość pozytywnych odowiedzi, przypadek kiedy jeden Acceptor ulegnie awarii nic sie nie dzieje z całym systemem.</p>
+<h4 id="learner-ulega-awarii">Learner ulega awarii</h4>
+
+
+
+
+
+
+
+
+
+  
+
+
+<figure role="group" aria-describedby="caption-77c62039b282d02733ea1bf8e463cb58">
+  <a href="/test/post/paxos-images/learner.jpg" class="img-link">
+    <img src="/test/post/paxos-images/learner_hueafabb23a10609b3c5afe65b80024c53_19461_700x0_resize_q75_box.jpg">
+  </a>
+  <figcaption id="caption-77c62039b282d02733ea1bf8e463cb58">
+    Learner ulega awarii
+  </figcaption>
+</figure>
+
+<p>Tak samo jak powyżej, system sprawnie radzi sobie z awarią Learnenra.</p>
+<h4 id="proposer-ulega-awarii">Proposer ulega awarii</h4>
+
+
+
+
+
+
+
+
+
+  
+
+
+<figure role="group" aria-describedby="caption-57cc346dd1df95d7fdc9a4d34c313d9a">
+  <a href="/test/post/paxos-images/proposer.jpg" class="img-link">
+    <img src="/test/post/paxos-images/proposer_hude8eab8a04e5fc2487e9cd52a2ed0d33_33285_700x0_resize_q75_box.jpg">
+  </a>
+  <figcaption id="caption-57cc346dd1df95d7fdc9a4d34c313d9a">
+    Proposer ulega awarii
+  </figcaption>
+</figure>
+
+<p>Ten przypadek jest dosyć złożony. W przypadku kiedy awarii ulega Proposer musi niezwłocznie zostać wybrany nowy. Procedura wybierania nowego Proposera jest bardzo podobna do poprzednich, polegamy na demokracji. Każdy członek ma losowy timer po którego upływie może zgłosić kandydaturę na Proposera(o ile obecny nie odpowiada)</p>
+<p>Wychodząc naprzeciw redundancji występującej w podstawowej wersji algorytmu, wprowadzono MULTIPAXOS który wykonuję pierwszy etap tylko w momencie utraty lidera. W pozostałych przypadkach wykonywana jest tylko druga część algorytmu.</p>
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           
             <footer role="contentinfo">

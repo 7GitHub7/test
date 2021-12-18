@@ -6,11 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.90.1" />
-  <link rel="canonical" href="https://7github7.github.io/test/tags/" />
+  <link rel="canonical" href="https://7github7.github.io/test/post/webdev-s%C5%82ownik-cz.1/" />
 
   
     
-    <meta name="description" content="Tags">
+    <meta name="description" content="Autoryzacja vs uwierzytelnienie Uwierzytelnianie - weryfikacja tożsamości uzytkownika np. za pomocą hasła
+Autoryzacja - prawo do wykonania konkretnej operacji/dostępu do konkretnego pliku(następuje po uwierzytelnianiu)
+Gdzie prowadzi adres 127.0.0.1? Do naszego komputera. Informacje są wymieniane wewnątrz naszego komputera.
+“Loopback” - tutaj nasze zapytania trafiaja, jest to witualnie urządzenie sieciowe.
+127.0.0.2/3/4 - prowadzi do tego samego.
+Czym różni sie szyfrowanie symetryczne od asymetrycznego? Szyfrowanie symetryczne używa jdnego klucza do szyfrowania jaki deszyfrowania informacji.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://7github7.github.io/test/apple-touch-icon.png">
@@ -56,7 +61,7 @@
 
   
   
-  <title>Tags | Blog</title>
+  <title>Webdev słownik cz.1 | Blog</title>
 </head>
 
   <body>
@@ -195,7 +200,7 @@
       
       
       
-      <a href="/test/post/" >
+      <a href="/test/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -208,7 +213,7 @@
       
       
       
-      <a href="/test/tags/" aria-current="page">
+      <a href="/test/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -239,33 +244,132 @@
         <div>
           
   <main id="main">
-    <h1>Tags</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Webdev słownik cz.1
+    </h1>
+
+    <div class="date">
       
-        <li>
-          <h2>
-            <a href="/test/tags/algorytmy/">
+      
+      <strong>Publish date: </strong>Dec 18, 2021
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              (1) algorytmy
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/test/tags/web/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) web
-            </a>
-          </h2>
-        </li>
-      
-    </ul>
+              
+              <a href="/test/tags/web/">web</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+
+
+    <h4 id="autoryzacja-vs-uwierzytelnienie">Autoryzacja vs uwierzytelnienie</h4>
+<p>Uwierzytelnianie - weryfikacja tożsamości uzytkownika np. za pomocą hasła</p>
+<p>Autoryzacja - prawo do wykonania konkretnej operacji/dostępu do konkretnego pliku(następuje po uwierzytelnianiu)</p>
+<h4 id="gdzie-prowadzi-adres-127001">Gdzie prowadzi adres 127.0.0.1?</h4>
+<p>Do naszego komputera. Informacje są wymieniane wewnątrz naszego komputera.</p>
+<p>&ldquo;Loopback&rdquo; - tutaj nasze zapytania trafiaja, jest to witualnie urządzenie sieciowe.</p>
+<p>127.0.0.2/3/4 - prowadzi do tego samego.</p>
+<h4 id="czym-różni-sie-szyfrowanie-symetryczne-od-asymetrycznego">Czym różni sie szyfrowanie symetryczne od asymetrycznego?</h4>
+<p>Szyfrowanie symetryczne używa jdnego klucza do szyfrowania jaki deszyfrowania informacji.</p>
+<p>Asymetryczne polega na tym, że mamy do dyspozycji dwa klucze(prywatny i publiczny). Jeden z nich służy do szyfrowania, drugi do odszyfowaywania.</p>
+<p>Klucz publiczny wysylamy do drugiej osoby, dzięki czemu ta osoba jest w stanie zaszyfrować tym kluczem wiadomość i nam ją odsyła. Tylko posiadacz klucza prywatnego może ją odczytać(nawet odoba która zaszyfrowała nie może jej odczytać- jedynie ma dostęp do wiadomości przez to że wie co zaszyfrowała wpisała&hellip;).</p>
+<p>Asymetryczny wykorzystywany np przy mailach.</p>
+<h4 id="czym-sie-różni-szyfrowanie-a-hashowanie">Czym sie różni szyfrowanie a hashowanie?</h4>
+<p>Szyfrowanie - proces zmiany tekstu jawnego(który rozumiemy) w szyfrogram</p>
+<p>Hashowanie - wyliczanie za pomocą funkcji skrótu ciągu znakó o stałej długości. Jest to proces nieodwracalny.</p>
+<p>Gdzie używamy hashowania? - w bazach danych przy hasłach, ponieważ mogą one wycieknąć. Do haseł dodawana jest sól, czyli unikalna wartość per użytkownik.</p>
+<p>Standardem także jest celowe opóźnianie sprawdzanie poprawności hasha aby opóźnić próby odagnięcia ich za pomocą np. Brute force</p>
+<p>bcrypt (algorytm)- do poczytania</p>
+<p>Drugim przykładem użycia hash może być sprawdzania czy plik się zmienił.</p>
+<h4 id="co-to-znaczy-że-http-jest-bezstanowe">Co to znaczy, że http jest bezstanowe?</h4>
+<p>Każde zaytanie jest jest rozpatrywane niezależnie od innych. Protokół  nie zachowuje żadnych informacji o poprzednich transakcjach.</p>
+<p>Dlatego też używamy ciasteczek w przeglądarce.</p>
+<h4 id="z-jakich-elementów-składa-się-żądanie-http">Z jakich elementów składa się żądanie HTTP?</h4>
+<ol>
+<li>
+<p>Metoda - GET,POST,PUT,DELETE&hellip;</p>
+</li>
+<li>
+<p>Adres</p>
+</li>
+<li>
+<p>Wersja protokołu - 1.0 - 3.0, https</p>
+</li>
+<li>
+<p>Nagłówków - są rozdzielane znakiem CRLF, popularne nagłówki to cookies, user-agent(przeglądarka dodaję wersję o przeglądarce🙂 ), content-length - przeglądarka wie ile ma odebrać danych.</p>
+</li>
+</ol>
+<h4 id="podstawowe-kody-błędów-503-404-301">Podstawowe kody błędów 503, 404, 301</h4>
+<p>503  - usługa niedostępna</p>
+<p>404 -  strona nie istnieje</p>
+<p>301 - trwale przeniesiony</p>
+<h4 id="czy-rózni-się-etcpasswd-od-etcshadow">Czy rózni się /etc/passwd od /etc/shadow?</h4>
+<p>etc/passwd - nazwa, identyfikator, grupa podstawowa, katalog domowy, powłoka</p>
+<p>etch/shadow - nazwa, hasło(hash), data zmiany hasła</p>
+<p>chmod - można zmienić uprawnienia do pliku</p>
+<p>ls - list files in folder</p>
+<h4 id="tcpudp">TCP/UDP?</h4>
+<p>TCP -  niezawodny, wyjiorzystuje three-way handshake(pytamy o coś,  dostajemy odpowiedz, potwierdzamy )</p>
+<p>UDP - wysyłamy pakiety bez potwierdzenia zwrotnego - zystkujemy na szybkości ale tracimy na niezwodności</p>
+<h4 id="rodzaje-wstrzyknięć-danych-do-zapytańdo-dokończenia">Rodzaje wstrzyknięć danych do zapytań(do dokończenia):</h4>
+<p>CSS injection -</p>
+<p>NoSQL injection -</p>
+<p>LDAP injection -</p>
+<p>Command injection -</p>
+<p>Server-Side injection -</p>
+<h4 id="zasada-najmniejszego-uprzywilejowania">Zasada najmniejszego uprzywilejowania:</h4>
+<p>Każdy element systemu ma dostęp tylko do informacji które są mu rzeczywiscie potrzebne</p>
+<h4 id="xss-rodzaje">XSS rodzaje</h4>
+<p>Reflected - kod jest zaszyty w linku przesłanym do kogoś</p>
+<p>Stored - kod jest zapisany w bazie</p>
+<p>DOM - użyto niebezpiecznych funkcji JS(innerHTML/eval)</p>
+<p>InnerHTML może zawierać tagi htmla w związku ztym może wykonać kod JS, w odróznieniu do innerTXT gdzie mamy doczynienia zczystym tekstem</p>
+<ul>
+<li>
+<p>XEE do doczytania</p>
+</li>
+<li>
+<p>Race condition - np. kod rabatowy w sklepie zostanie uznany kilka razy.(Intruder)</p>
+</li>
+<li>
+<p>Damn Vulnerable</p>
+</li>
+<li>
+<p>CVE - common vulnerbilities and exposures - indetyfikator odpowiadający powrzechnie znanym podatnościom</p>
+</li>
+<li>
+<p>Certyfikat SSL - zawiera datę ważności(od do), numer seryjny, informacje o podmiocie, adres listy CRL, dane wystawcy</p>
+</li>
+<li>
+<p>Same origin policy - nie możemy wykonywać zapytań z róznych domen, jak jesteśmy zalogowani w banku to nie możemy jednocześnie być zaloganie na innej stronie z której można wysłac zapytania</p>
+</li>
+</ul>
+<p>SOP - ten sam protokół, domena i port</p>
+<p>W takim wypadku używamy CORS</p>
+
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           
             <footer role="contentinfo">

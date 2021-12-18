@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Blog</title>
-    <link>https://7github7.github.io/test/post/</link>
-    <description>Recent content in Posts on Blog</description>
+    <title>web on Blog</title>
+    <link>https://7github7.github.io/test/tags/web/</link>
+    <description>Recent content in web on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Webdev słownik cz.1</title>
       <link>https://7github7.github.io/test/post/webdev-s%C5%82ownik-cz.1/</link>
@@ -19,15 +19,6 @@ Gdzie prowadzi adres 127.0.0.1? Do naszego komputera. Informacje są wymieniane 
 &amp;ldquo;Loopback&amp;rdquo; - tutaj nasze zapytania trafiaja, jest to witualnie urządzenie sieciowe.
 127.0.0.2/3/4 - prowadzi do tego samego.
 Czym różni sie szyfrowanie symetryczne od asymetrycznego? Szyfrowanie symetryczne używa jdnego klucza do szyfrowania jaki deszyfrowania informacji.</description>
-    </item>
-    
-    <item>
-      <title>Paxos &amp; Raft</title>
-      <link>https://7github7.github.io/test/post/paxos-images/</link>
-      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://7github7.github.io/test/post/paxos-images/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Algorytmy konsensusu&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
