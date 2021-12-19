@@ -6,7 +6,22 @@
     <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://7github7.github.io/test/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Praktyczny Python nr. 1 - Memcached</title>
+      <link>https://7github7.github.io/test/post/praktyczny-python-nr.-1-memcached/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://7github7.github.io/test/post/praktyczny-python-nr.-1-memcached/</guid>
+      <description>Memcached Przechowywać dane możemy na wiele sposobów. Najbardziej popularną metodą są bazy danych. Utrzymanie danych jest proste i dane są uporzadkowane.
+Wykonując zapytania do bazy która posiada znaczną ilość danych może się okazać, że czas otrzymania informacji zwrotnej nie będzie optymalny.
+Rozwiązaniem tego problemu jest cachowanie danych.
+Plusy:
+  Szybki dostęp do danych
+  Redukcja zapytań do bazy danych
+  Odciążenie bazy danych w przypadku kiedy mamy system rozproszony</description>
+    </item>
+    
     <item>
       <title>Webdev słownik cz.1</title>
       <link>https://7github7.github.io/test/post/webdev-s%C5%82ownik-cz.1/</link>
